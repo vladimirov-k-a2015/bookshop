@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  get "store/index"
-  
+  resources :products
   # You can have the root of your site routed with "root"
   root to:'store#index', as: 'store'
 
-  resources :products
+  # get "store/index"
+  
+  
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
