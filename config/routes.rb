@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :line_items
+  resources :carts
   resources :products
   # You can have the root of your site routed with "root"
   root to:'store#index', as: 'store'
