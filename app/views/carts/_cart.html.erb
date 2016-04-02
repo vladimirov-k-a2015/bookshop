@@ -1,0 +1,14 @@
+<h2>Корзина</h2>
+
+<table>
+<!-- везде @cart (как было во вьюхе app/views/carts/show.html.erb) заменить на: cart -->
+  <%= render(cart.line_items) %>
+
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+  </tr>
+
+</table>
+
+<%= button_to 'Очистить корзину', cart, method: :delete, data: {confirm: 'Точно очистить?'} %>
