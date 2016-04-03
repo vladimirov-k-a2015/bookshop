@@ -1,14 +1,16 @@
-<h2>Корзина</h2>
 
-<table>
-<!-- везде @cart (как было во вьюхе app/views/carts/show.html.erb) заменить на: cart -->
-  <%= render(cart.line_items) %>
+	<div class="cart_title"><h3>Корзина</h3></div>
 
-  <tr class="total_line">
-    <td colspan="2">Total</td>
-    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
-  </tr>
+	<table>
+	<!-- везде @cart (как было во вьюхе app/views/carts/show.html.erb) заменить на: cart -->
+	  <%= render(cart.line_items) %>
 
-</table>
+	  <tr class="total_line">
+	    <td colspan="2">Total</td>
+	    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+	  </tr>
 
-<%= button_to 'Очистить корзину', cart, method: :delete, data: {confirm: 'Точно очистить?'} %>
+	</table>
+
+	<%= button_to 'Очистить корзину', cart, method: :delete, data: {confirm: 'Точно очистить?'} %>
+
